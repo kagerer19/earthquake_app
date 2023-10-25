@@ -1,8 +1,8 @@
 import axios from 'axios';
-import { useState } from 'react';
+import {useState} from 'react';
 import './App.css';
 
-const App = () => {
+export const App = () => {
     const [chosenType, setChosenType] = useState(null);
     const [chosenMag, setChosenMag] = useState(null);
     const [chosenLocation, setChosenLocation] = useState(null);
@@ -54,11 +54,11 @@ const App = () => {
                                 value={chosenType}
                                 onChange={(e) => setChosenType(e.target.value)}
                             >
-                                <option value={null}>Select a Type</option>
+                                <option value={''}>Select a Type</option>
                                 <option value='earthquake'>Earthquake</option>
                                 <option value='quarry blast'>Quarry Blast</option>
                                 <option value='ice quake'>Ice Quake</option>
-                                <option value='explosion'>Explosion</option>
+                                <option value='explosion'>Explosion</ option>
                             </select>
                         </li>
                         <li>
@@ -68,7 +68,7 @@ const App = () => {
                                 value={chosenMag}
                                 onChange={(e) => setChosenMag(e.target.value)}
                             >
-                                <option value={null}>Select magnitude level</option>
+                                <option value={''}>Select magnitude level</option>
                                 <option value='2.5'>2.5+</option>
                                 <option value='5.5'>5.5+</option>
                                 <option value='6.1'>6.1+</option>
@@ -96,7 +96,7 @@ const App = () => {
                                 value={chosenDateRange}
                                 onChange={(e) => setChosenDateRange(e.target.value)}
                             >
-                                <option value={null}>Select date range</option>
+                                <option value={''}>Select date range</option>
                                 <option value='7'>Past 7 Days</option>
                                 <option value='14'>Past 14 Days</option>
                                 <option value='21'>Past 21 Days</option>
@@ -110,7 +110,7 @@ const App = () => {
                                 value={chosenSortOption}
                                 onChange={(e) => setchosenSortOption(e.target.value)}
                             >
-                                <option value={null}>Sort by</option>
+                                <option value={''}>Sort by</option>
                                 <option value='desc'>Largest Magnitude First</option>
                                 <option value='asc'>Smallest Magnitude First</option>
                             </select>
